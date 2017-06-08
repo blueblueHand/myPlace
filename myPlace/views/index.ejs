@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>demo</title>
+    
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+      .test{
+        width: 10px;
+        /*transition: width 0.35s ease 1s; */
+        transition: all 0.35s ease 1s; 
+        background: #eee;
+      }
+      .test span{
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+<header id='header'>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#navbar">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">菜鸟教程</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">iOS</a></li>
+            <li><a href="#">SVN</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Java <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">jmeter</a></li>
+                    <li><a href="#">EJB</a></li>
+                    <li><a href="#">Jasper Report</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">分离的链接</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+</header>
+  <div class='container wrapper'>
+  	<div class='row'>
+  		<div class='col-md-3 col-xs-6'>dsf</div>
+  		<div class='col-md-3 col-xs-6'>sdf</div>
+  		<div class='col-md-3 col-xs-6'>sdf</div>
+  		<div class='col-md-3 col-xs-6'>sdf</div>
+  	</div>
+  	<div class='test'><span>hello</span></div>
+  </div>
   </body>
+  <script>
+$(function(){
+  $('.test').on('click',function(){
+    $('.test').css({width:'200px','background-color':'red'})
+  })
+})
+//   	$(function () {
+//     'use strict';
+
+
+
+
+//     var navCollapse = $('#navbar');
+
+//     $('#navbar')
+//         .on('show.bs.collapse', function () {
+//             $('html').addClass('menu-slider');
+//         })
+//         .on('shown.bs.collapse', function () {
+//             $('html').addClass('in');
+//         })
+//         .on('hide.bs.collapse', function () {
+//             $('html').removeClass('menu-slider');
+//         })
+//         .on('hidden.bs.collapse', function () {
+//             $('html').removeClass('in');
+//         });
+
+//     $('.nav-drop-toggle').parent()
+//         .on('shown.bs.dropdown', function(){
+//             navCollapse.addClass('sub-open');
+//         }).on('hidden.bs.dropdown', function(){
+//             navCollapse.removeClass('sub-open');
+//         });
+
+//     $('.close-sub').click(function () {
+//         $('.nav-drop-toggle').parent().removeClass('open');
+//         // hack 强制浏览器重绘解决ios safari上关闭后残留部分元素的bug
+//         $('.nav-drop-toggle').parent().find('.dropdown-menu')[0].offsetHeight;
+//         navCollapse.removeClass('sub-open');
+//         $(".navbar-static-top").css("z-index","1000");
+//     });
+
+//     $('#global-mask').click(function(){
+//         $('.navbar-toggle').click();
+//     })
+// });
+
+  </script>
 </html>

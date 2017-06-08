@@ -1,8 +1,16 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+     line-height: 18px;
+    background-color: #f7f5f5;
+    font-size: 13px;
+    font-size: .13rem;
+    font-family: "PingFang SC","Hiragino Sans GB","Microsoft Yahei",arial,\5b8b\4f53,"Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: #00B7FF;
+
+@media (max-width: 995px) {
+  
 }
+
+@media (orientation: landscape) and (max-width: 995px) {
+ }
