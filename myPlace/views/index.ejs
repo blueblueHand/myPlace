@@ -2,12 +2,16 @@
 <html>
   <head>
     <title>demo</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <style>
+    html{
+      font-size: 14px;
+      background-color: #f5f5f5;
+    }
       .test{
         width: 10px;
         /*transition: width 0.35s ease 1s; */
@@ -17,42 +21,147 @@
       .test span{
         display: inline-block;
       }
+      #header{box-sizing: border-box;font-size: 15px;background-color: #fff;}
+      #example-navbar-collapse{float: left;height: auto;}
+      .navbar{min-height: 70px;}
+      .navbar-brand{min-width: 134px;margin-left: 0!important; margin-right: .67rem;height: 70px!important;}
+      #header .container{padding-right: 0;padding-left: 0;height: 100%}
+    .navbar-default .navbar-nav>li {height: 70px;}
+    .navbar-default .navbar-nav>li>a { transition: color .3s cubic-bezier(.25,.1,.25,1); height: 100%;}
+    .navbar-default{background-color: #fff;    box-shadow: 0 0 10px 0 rgba(0,0,0,.1)}
+    .navbar .nav>li>a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #333;
+    }
+    @media (min-width: 995px){
+      .navbar-nav>li>a {
+          padding-top: 23.5px;
+          padding-bottom: 23.5px;
+      }
+    }
+    @media (min-width: 980px){
+      .container {
+          width: 1200px;
+      }
+    }
+    #hd-search-form{
+      width: 0;
+      transform: 
+    }
+/*.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 23px;
+}
+.nav>li>a {
+    padding: 10px 15px;
+}*/
     </style>
   </head>
   <body>
 <header id='header'>
 <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target="#navbar">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">菜鸟教程</a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">iOS</a></li>
-            <li><a href="#">SVN</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Java <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">jmeter</a></li>
-                    <li><a href="#">EJB</a></li>
-                    <li><a href="#">Jasper Report</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">分离的链接</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+    <div class="container-fluid container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        
+                    </button>
+                    <div class="navbar-brand">
+                        <a href="/"><img src="images/logo.png" width="132" alt="产品壹佰"></a>
+                    </div>
+
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+    
+                    <div class="menu-container">
+                       
+                        
+                        <ul class="nav navbar-nav">
+                            <li class="">
+                                <a href="/" data-etrack="点击导航－首页"><span class="round-icon bg-red pull-left icon-app_home_menu_home"></span>首页</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle nav-drop-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-etrack="点击导航－阅读时光">
+                                    <span class="round-icon bg-green pull-left icon-app_home_menu_read"></span>阅读时光
+                                    <span class="arrow-down icon-index_jt_down"></span>
+                                    <span class="arrow-right icon-index_jt_right pull-right"></span>
+                                </a>
+                                <div class="dropdown-menu expand">
+                                    <div class="dropdown-menu-container">
+                                        <section class="category section">
+                                            <h5 class="section-name hidden-lg">
+                                            <span class="round-icon bg-green pull-left icon-app_home_menu_read"></span>阅读时光</h5>
+                                            <ul class="list clearfix">
+                                                <li><a href="/pm" data-etrack-to="true" data-etrack="点击导航－阅读时光">产品经理</a></li>
+                                                <li><a href="/analysis" data-etrack-to="true" data-etrack="点击导航－阅读时光">产品分析</a></li>
+                                                <li><a href="/po" data-etrack-to="true" data-etrack="点击导航－阅读时光">产品运营</a></li>
+                                                <li><a href="/ue" data-etrack-to="true" data-etrack="点击导航－阅读时光">交互设计</a></li>
+                                                <li><a href="/ui" data-etrack-to="true" data-etrack="点击导航－阅读时光">视觉设计</a></li>
+                                                <li><a href="/news" data-etrack-to="true" data-etrack="点击导航－阅读时光">行业动态</a></li>
+                                                <li><a href="/experience" data-etrack-to="true" data-etrack="点击导航－阅读时光">职场经验</a></li>
+                                                 <li><a href="/good_reputation" data-etrack-to="true" data-etrack="点击导航－阅读时光">学员喜讯</a></li>
+                                            </ul>
+                                        </section>
+                                        <a class="close-sub icon-app_home_menu_read_exit"></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/special" class="hidden-md hidden-lg " data-etrack-to="true" data-etrack="导航-学习-学习专题"> <span class="round-icon bg-deep-ching pull-left icon-app_home_menu_study"></span>学习</a>
+                        
+                                <a class="dropdown-toggle nav-drop-toggle hidden-sm hidden-xs " role="button" aria-haspopup="true" aria-expanded="false">
+                                    学习<span class="arrow-down icon-index_jt_down"></span>
+                                    <span class="arrow-right icon-index_jt_right pull-right"></span>
+                                </a>
+                                <div class="dropdown-menu standard hidden-sm hidden-xs">
+                                    <ul class="list clearfix">
+                                        <li><a href="/special" data-etrack-to="true" data-etrack="导航-学习-学习专题">学习专题</a></li>
+                                        <li><a href="/softwares" data-etrack-to="true" data-etrack="导航-学习-工具下载">工具下载</a></li>
+                                        <li><a href="/books" data-etrack-to="true">书籍推荐</a></li>
+                                        <li><a href="/Interview" data-etrack-to="true" data-etrack="导航-学习-大咖专访">大咖专访</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <a href="/activities" data-etrack="点击导航－聚会沙龙（活动）"><span class="round-icon bg-cyan pull-left icon-app_home_menu_activity"></span>聚会沙龙</a>
+                            </li>
+                            <li class="">
+                                <a href="/lecture" data-etrack="点击导航－壹佰讲堂"><span class="round-icon bg-lake-blue pull-left icon-app_home_menu_djt"></span>壹佰讲堂</a>
+                            </li>
+                            <li>
+                                <a class="hidden-sm hidden-xs" href="http://www.kaikeba.com/course/16?cp100" target="_blank" data-etrack="点击导航－产品经理培训"><span class="round-icon bg-dark-yellow  pull-left icon-app_home_menu_mhxy"></span>产品经理培训</a>
+                                <a class="hidden-md hidden-lg" href="http://m.kaikeba.com/special/pm/" data-etrack="点击导航－产品经理培训"><span class="round-icon bg-dark-yellow  pull-left icon-app_home_menu_mhxy"></span>产品经理培训</a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="nav navbar-nav navbar-right header-user-corner">
+                            <li class="access-btn login">
+                                <a href="/auth/login" data-etrack="点击导航－登录" alt="登录">登录</a>
+                            </li>
+                            <li class="access-btn regist">
+                                <a href="/auth/register" data-etrack="点击导航－注册" alt="注册">注册</a>
+                            </li>
+                            <li>
+                                <a class="publish" data-etrack="点击导航－投稿"><span>投稿</span></a>
+                            </li>
+                        </ul>
+                        
+                        <form class="navbar-form navbar-right" autocomplete="off" action="/search" method="GET" role="search" id="hd-search-form">
+                            <div class="form-group search-container" style="position: relative;">
+                                <input type="text" name="keywords" class="form-control" autocomplete="off" maxlength="30" placeholder="产品经理" data-limit="30">
+                                <a class="search-hd-btn glyphicon glyphicon-search" href="javascript:;" data-etrack="点击搜索"></a>
+                            </div>
+                        </form>
+                    </div>
+    
+                </div><!--/.nav-collapse -->
+            </div>
+    
+   
     </div>
 </nav>
 </header>
